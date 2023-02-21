@@ -1,1 +1,5 @@
 ##IDENTIFICACIÓ DE DEPENDENCIES
+
+-Python3
+-Wsgi
+-Ajax
