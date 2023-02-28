@@ -1,6 +1,6 @@
 ## IDENTIFICACIÓ DE DEPENDÈNCIES
 
-A continuaci
+A continuació una llista de les eines que necessitarem al projecte:
     
     1. Python3     
     2. Ajax
