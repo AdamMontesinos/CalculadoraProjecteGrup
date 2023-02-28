@@ -11,14 +11,14 @@ FORMAT 1A:
     }
   ]
   
-  ## SECCIÓ DE RESTA
-  ### URL RESTA [GET]
-  + Response 200 (application/json)
-    [
-      {
-        "resultat": X;
-      }
-    ]
+## SECCIÓ DE RESTA
+### URL RESTA [GET]
++ Response 200 (application/json)
+  [
+    {
+      "resultat": X;
+    }
+  ]
     
 ## SECCIÓ DE MULTIPLICACIÓ
 ### URL MULTIPLICACIÓ [GET]
@@ -29,11 +29,11 @@ FORMAT 1A:
     }
   ]
   
-  ## SECCIÓ DE DIVISIÓ
-  ### URL DIVISIÓ [GET]
-  + Response 200 (application/json)
-    [
-      {
-        "resultat": X;
-      }
-    ]
+## SECCIÓ DE DIVISIÓ
+ ### URL DIVISIÓ [GET]
+ + Response 200 (application/json)
+   [
+     {
+       "resultat": X;
+     }
+   ]
