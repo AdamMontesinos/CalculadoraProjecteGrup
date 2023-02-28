@@ -1,0 +1,31 @@
+@font-face {
+    font-family: fuente;
+    src: url(assets/gridget/Gridget.otf);
+}
+
+.container{
+    border: solid 3px black;
+    border-radius: 2vh;
+}
+
+h1{
+    font-family: fuente;
+    margin: 2%;
+}
+
+h2{
+    font-weight: bold;
+}
+
+.apikey{
+    font-size: x-large;
+    margin: 2%;
+}
+
+div{
+    margin: 1%;
+}
+
+.inputnumber{
+    width: 5vh;
+}
