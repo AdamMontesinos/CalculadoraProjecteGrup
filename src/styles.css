@@ -8,6 +8,22 @@
     text-align: center;
 }
 
+.cosanegra{
+    background-color: black;
+    border-radius: 10px;
+    border: none;
+    padding: 4%;
+    color: white;
+}
+
+.cosaverde{
+    background-color: darkblue;
+    border-radius: 10px;
+    border: none;
+    padding: 4%;
+    color: white;
+}
+
 .container{
     border: solid 3px black;
     border-radius: 2vh;
