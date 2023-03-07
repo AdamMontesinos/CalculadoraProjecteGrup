@@ -6,8 +6,9 @@ let endpointDisio = '/divisio/';
 function enviaParametres() {
     let valors = agafaValors();
     let opcio = agafaOpcio();
+    let resultOutput = agafaResultat();
 
-    fetch(`/api${eval(operator.toLowerCase() + 'endpoint')}${op1}/${op2}`)
+    fetch(`/api${eval(opcio.toLowerCase() + 'endpoint')}${op1}/${op2}`)
         .then(response => response.json())
         .then(data => {
         resultOutput.innerHTML = `${data.operador}: ${data.resultat}`;
@@ -27,4 +28,8 @@ function agafaValors() {
 
 function agafaOpcio() {
     return document.getElementsByClassName('calcOption')[0].value;
+}
+
+function agafaResultat() {
+    return document.getElementsByClassName('resultContainer')[0].textContent;
 }
