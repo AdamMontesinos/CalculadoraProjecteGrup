@@ -3,9 +3,18 @@
     src: url(assets/gridget/Gridget.otf);
 }
 
+* {
+    margin: 6px;
+    text-align: center;
+}
+
 .container{
     border: solid 3px black;
     border-radius: 2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 h1{
