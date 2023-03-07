@@ -2,7 +2,7 @@
 
 ## SECCIÓ DE SUMA
 
-### URL SUMA [GET]
+### URL SUMA [POST]
 
 + Response 200 (application/json)
   [
@@ -13,7 +13,7 @@
   
 ## SECCIÓ DE RESTA
 
-### URL RESTA [GET]
+### URL RESTA [POST]
 
 + Response 200 (application/json)
   [
@@ -24,7 +24,7 @@
 
 ## SECCIÓ DE MULTIPLICACIÓ
 
-### URL MULTIPLICACIÓ [GET]
+### URL MULTIPLICACIÓ [POST]
 
 + Response 200 (application/json)
   [
@@ -35,7 +35,7 @@
   
 ## SECCIÓ DE DIVISIÓ
 
-### URL DIVISIÓ [GET]
+### URL DIVISIÓ [POST]
 
 + Response 200 (application/json)
   [
