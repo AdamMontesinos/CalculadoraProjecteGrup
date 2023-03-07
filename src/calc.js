@@ -1,34 +1,30 @@
-// Define the URL endpoints for the calculator operations
-const sumEndpoint = '/suma/';
-const subtractEndpoint = '/resta/';
-const multiplyEndpoint = '/multiplicacio/';
-const divideEndpoint = '/divisio/';
+let endpointSuma = '/suma/';
+let endpointResta = '/resta/';
+let endpointMultiplicacio = '/multiplicacio/';
+let endpointDisio = '/divisio/';
 
-// Define the HTML elements for the calculator inputs and outputs
-const op1Input = document.getElementById('op1');
-const op2Input = document.getElementById('op2');
-const operatorSelect = document.getElementById('operator');
-const resultOutput = document.getElementById('result');
+function enviaParametres() {
+    let valors = agafaValors();
+    let opcio = agafaOpcio();
 
-// Define a function to make the API call to the Flask server
-function calculate() {
-  // Get the selected operator and operands
-  const operator = operatorSelect.value;
-  const op1 = op1Input.value;
-  const op2 = op2Input.value;
-
-  // Make the API call using the appropriate endpoint and parameters
-  fetch(`/api${eval(operator.toLowerCase() + 'Endpoint')}${op1}/${op2}`)
-    .then(response => response.json())
-    .then(data => {
-      // Update the result output with the calculated value
-      resultOutput.innerHTML = `${data.operador}: ${data.resultat}`;
-    })
-    .catch(error => {
-      console.error(error);
-      resultOutput.innerHTML = 'Error haciendo el calculo.';
-    });
+    fetch(`/api${eval(operator.toLowerCase() + 'endpoint')}${op1}/${op2}`)
+        .then(response => response.json())
+        .then(data => {
+        resultOutput.innerHTML = `${data.operador}: ${data.resultat}`;
+        })
+        .catch(error => {
+        console.error(error);
+        resultOutput.innerHTML = 'Error haciendo el calculo.';
+        });
 }
 
-// Add an event listener to the calculate button to trigger the calculation function
-document.getElementById('calculateBtn').addEventListener('click', calculate);
+function agafaValors() {
+    let operandCollection = document.getElementsByClassName('inputNumber');
+    let firstOperand = operandCollection[0].value;
+    let secondOperand = operandCollection[1].value;
+    return [firstOperand, secondOperand];
+}
+
+function agafaOpcio() {
+    return document.getElementsByClassName('calcOption')[0].value;
+}

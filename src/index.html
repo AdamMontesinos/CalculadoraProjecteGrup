@@ -12,11 +12,11 @@
     <div class="container">
        <div>
             <div>
-                <label>OPERAND 1:</label>
-                <input type="text" id="op1" name="op1" class="inputnumber">
+                <label>PRIMER OPERAND:</label>
+                <input type="text" class="inputNumber">
             </div>
             <div>
-                <select class="cosanegra" name="option" id="calc">
+                <select name="option" class="calcOption">
                     <option value="Suma">Suma</option>
                     <option value="Resta">Resta</option>
                     <option value="Multiplicació">Multiplicació</option>
@@ -24,15 +24,16 @@
                 </select>
             </div>
             <div>
-                <label>OPERAND 2:</label>
-                <input type="text" id="op2" name="op2" class="inputnumber">
+                <label>SEGON OPERAND:</label>
+                <input type="text" class="inputNumber">
             </div>
 
-            <button class="cosaverde" onclick="sendParamters()">Enviar paràmetres</button>
+            <button onclick="enviaParametres()">Enviar paràmetres</button>
        </div>
        <div>
             <h2>Resultat:<p class="resultContainer"></p></h2>
         </div>  
     </div>
 </body>
+<script src="calc.js"></script>
 </html>
