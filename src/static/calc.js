@@ -8,10 +8,10 @@ function enviaParametres() {
     let opcio = agafaOpcio();
     let resultOutput = agafaResultat();
 
-    fetch(`/api${eval(opcio.toLowerCase() + 'endpoint')}${valors[0]}/${valors[1]}`)
+    fetch(`http://localhost:5000/${(opcio.toLowerCase())}/${valors[0]}/${valors[1]}`)
         .then(response => response.json())
         .then(data => {
-        resultOutput = `${data.operador}: ${data.resultat}`;
+            resultOutput.textContent = data.resultat;
         })
     .catch(error => {
         resultOutput = 'S\'ha produït un error a l\'hora de connectar amb el servidor.';
@@ -30,5 +30,5 @@ function agafaOpcio() {
 }
 
 function agafaResultat() {
-    return document.getElementsByClassName('resultContainer')[0].textContent;
+    return document.getElementsByClassName('resultContainer')[0];
 }
