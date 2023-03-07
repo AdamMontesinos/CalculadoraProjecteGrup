@@ -8,21 +8,20 @@ function enviaParametres() {
     let opcio = agafaOpcio();
     let resultOutput = agafaResultat();
 
-    fetch(`/api${eval(opcio.toLowerCase() + 'endpoint')}${op1}/${op2}`)
+    fetch(`/api${eval(opcio.toLowerCase() + 'endpoint')}${valors[0]}/${valors[1]}`)
         .then(response => response.json())
         .then(data => {
-        resultOutput.innerHTML = `${data.operador}: ${data.resultat}`;
+        resultOutput = `${data.operador}: ${data.resultat}`;
         })
-        .catch(error => {
-        console.error(error);
-        resultOutput.innerHTML = 'Error haciendo el calculo.';
-        });
+    .catch(error => {
+        resultOutput = 'S\'ha produït un error a l\'hora de connectar amb el servidor.';
+    });
 }
 
 function agafaValors() {
-    let operandCollection = document.getElementsByClassName('inputNumber');
-    let firstOperand = operandCollection[0].value;
-    let secondOperand = operandCollection[1].value;
+    let coleccioOperands = document.getElementsByClassName('inputNumber');
+    let firstOperand = coleccioOperands[0].value;
+    let secondOperand = coleccioOperands[1].value;
     return [firstOperand, secondOperand];
 }
 
