@@ -8,7 +8,7 @@ function enviaParametres() {
     let opcio = agafaOpcio();
     let resultOutput = agafaResultat();
 
-    fetch(`http://localhost:5000/${(opcio.toLowerCase())}/${valors[0]}/${valors[1]}`)
+    fetch(`http://localhost:8080/${(opcio.toLowerCase())}/${valors[0]}/${valors[1]}`)
         .then(response => response.json())
         .then(data => {
             resultOutput.textContent = data.resultat;
